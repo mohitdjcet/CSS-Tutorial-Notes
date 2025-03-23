@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo-classes, Pseudo-elements</title>
+    <style>
+        :root {
+            --primary-color: blue;
+        }
+        h1 {
+            color: var(--primary-color);
+        }
+        button {
+            background-color: green;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: red;
+        }
+       input:focus {
+           border: 5px solid blue;
+       }
+       h1::before {
+           content: "Day 15: ";
+           color: red;
+       }
+       p::after {
+           content: " - Mohit Decodes";
+           color: blue;
+       }
+       p::first-letter {
+           font-size: 2em;
+           color: green;
+       }
+    </style>
+</head>
+<body>
+    <h1>Day 15</h1>
+    <p>Mohit Decodes</p>
+    <input type="text" placeholder="Enter your name">
+    <button>Click me</button>
+</body>
+</html>
